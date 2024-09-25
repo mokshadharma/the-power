@@ -17,6 +17,7 @@ printf "${normal}"
                                                    
      printf "${highlight} - Creating repo: ${normal}"
     ./create-repo-testrepo.sh | jq -r '.name'
+     printf "${highlight} - Granting team permissions in the repo: ${normal}"
     ./add-team-to-repo.sh
      printf "${highlight} - Creating webhook: ${normal}"
     ./create-webhook.sh  | jq -r '.id'
